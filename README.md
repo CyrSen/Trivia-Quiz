@@ -1,7 +1,7 @@
 # Project: Trivia-Quiz
 
 DESCRIPTION
-- A simple, fun Online Quiz that holds a lot of questions and answers about a variety of topics in a database.
+A simple, fun Online Quiz that holds a lot of questions and answers about a variety of topics in a database.
 
 FRONT-END
 1. index.php: Start/Home page that introduces the Trivia Quiz and allows to select a topic and then start the Quiz with ten questions.
@@ -11,7 +11,7 @@ Navigation buttons on all three front-pages for simple use and testing.
 
 
 TOOLS AND TECHNOLOGIES
-For website,: 
+For website: 
 - HTML
 - CSS
 - Bootstrap 5
@@ -26,11 +26,10 @@ For development and source control:
 - Git/GitHub
 
 For mockup
-- Figma. 
-- Link: https://www.figma.com/
+- Figma
 
 For retrospective
-- GoogleSlides. 
+- GoogleSlides
 
 LINKS
 - Mockup: https://www.figma.com/
