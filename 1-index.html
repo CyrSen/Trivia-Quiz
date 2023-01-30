@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="style.css"/>
 
-    <title>Cyr Quiz</title>
+    <title>Danger Quiz</title>
 
 </head>
 
@@ -37,7 +37,7 @@
         <div class="container">
 
 <!-- a tag class of navbar-BRAND -->
-            <a href="#" class="navbar-brand">Cyr Quiz</a>
+            <a href="#" class="navbar-brand">Danger Quiz</a>
 
 <!--BUTTON einfügen für Hamburger-Menü: We give it a class of "navbar dash toggler". We give it a type of "button". We need to add a couple of extra attributes: 1) we want the toggle to collapse. 2) we need to target a specific item to toggle, this is navbar. And then we put this ID navmenu to the navbar-collapse. We then need to put something in the button. This we do by adding a hamburger-icon with a span tag and add to that navbar-toggler-icon--->
 
@@ -57,21 +57,15 @@
 <!--In der ul fügen wir die Klasse margin-start-auto¨ hinzu, damit das Menü nach rechts kommt. -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#solution" class="nav-link">Solution</a>
+                        <a href="#solution" class="nav-link">Start</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#consulting" class="nav-link">Consulting</a>
+                        <a href="#consulting" class="nav-link">Questions</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#team" class="nav-link">Team</a>
+                        <a href="#team" class="nav-link">Result</a>
                     </li>
-                        <li class="nav-item">
-                        <a href="#faq" class="nav-link">FAQ</a>
-                    </li>
-<!--Language choice per link, this is just pro memoria-->
-                    <li class="nav-item">
-                        <a href="#language" class="nav-link">D|E</a>
-                    </li>
+
                 </ul>
            </div>
         </div>
@@ -85,17 +79,19 @@
 
 <!--For this section: dark background, light text, padding of five on all sides, centered text-->
 <!--I want the text centered on small screen (text-center, by default) but I want to have it aligned on the left on anything bigger than a mobile screen (text-sm-start)-->
-<section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+<section class="bg-black text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
     <!-- For content not to go to the edge at the left we put it into a container. However, the section itself we don't want in a container because that's the dark background.-->
     <!-- "align-items-center justify-content-between": I want to align the button the the center of the para and I want some space between image and para. -->
         <div class="container">
             <div class="d-sm-flex align-items-center justify-content-between">
                 <div> 
-                    <h1>Quiz <span class="text-warning">Kong</span></h1>
+                    <h1><span class="text-warning">Danger </span>Quiz 
+                    
+                    </h1>
     <!--Make the text a little big bigger. Use the class lead to do that.-->
     <!-- Get some space above and below the paragraph: ad a margin class "my" (m stands for margin and y stands for y-axis: -->
     
-                    <p class="lead my-4">Lorem ipsum dolor sit amet  <br>consectetur adipisicing elit. Atque necessitatibus vitae repellendus.</p>
+                    <p class="lead my-4">This quiz is not for the faint hearted. <br>Are you man enough?</p>
     <!--BUTTON that will open up the module (?). Button is blue (btn-primary) and bigger than the default (btn-lg)-->
 <!--
                     <button 
@@ -106,7 +102,7 @@
                 </div>
     <!--To avoid that image breaks out of the container we add class image-fluid, so the image is bound to the container. To make the image half the size, we add w-50-->
     <!--On very small screens I don't want to show the image. So I add "d-none" ("d" stands for display) and "d-sm-block" (to show the image on anything bigger than the small breakpoint, "d-sm-block" is display block on small and up)  -->
-                    <img class="img-fluid w-50 d-none d-lg-block "src="assets/Movie 2. From Dusk till Dawn.jpg" alt="">
+                    <img class="img-fluid w-50 d-none d-lg-block "src="assets/Hero image .jpg" alt="">
             </div>
         </div>
     </section>
@@ -119,10 +115,10 @@
 
 <!-- ELEMENT 8: TEAM SECTION START -->
 
-<section id="team" class="p-5 bg-primary">
+<section id="team" class="p-5 bg-warning">
     <div class="container">
-        <h2 class="text-center text-white">Some Of The Quiz Sections</h2>
-        <p class="lead text-center text-white mb-5">
+        <h2 class="text-center text-dark">Some Of The Quiz Sections</h2>
+        <p class="lead text-center text-dark mb-5">
             Our team all are experts with 10+ years working as entrepreneurs and researchers in the industry. 
         </p>
         <div class="row g-4">
