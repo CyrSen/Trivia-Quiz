@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous"/>
+
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Cyr Quiz</title>
+
+</head>
+
+<body>
+
+<!-- ELEMENT 1: RESPONSIVE NAVBAR START-->
+
+<!-- HTML5 nav tag with the class navbar, breakpoint at large (below breakpoint of 992px, hamburger-menu disappears) dark with light text -->
+<!-- Add a little bit of padding to the navbar: "py-3", whereas "padding on the y-Axis"; "fixed-top" keeps the navbar at the top. This brings the issue that it covers part of the content. To fix that, I'm going into styles.css. There I'm writing body and I'm using the pseudo-selector before. Basically we add a ghost element of 60px. -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+
+<!-- Container, der Logo in einem bestimmten Bereich hält, und beim wide screen nicht zu nah am Rand hält: Klasse Container-->
+        <div class="container">
+
+<!-- a tag class of navbar-BRAND -->
+            <a href="#" class="navbar-brand">Cyr Quiz</a>
+
+<!--BUTTON einfügen für Hamburger-Menü: We give it a class of "navbar dash toggler". We give it a type of "button". We need to add a couple of extra attributes: 1) we want the toggle to collapse. 2) we need to target a specific item to toggle, this is navbar. And then we put this ID navmenu to the navbar-collapse. We then need to put something in the button. This we do by adding a hamburger-icon with a span tag and add to that navbar-toggler-icon--->
+
+<button 
+    class="navbar-toggler" 
+    type="button" 
+    data-bs-toggle="collapse" 
+    data-bs-target="#navmenu"
+    >
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<!--MENU START-->
+<!--Div mit der Klasse Collapse-->
+            <div class="collapse navbar-collapse" id="navmenu">
+
+<!--In der ul fügen wir die Klasse margin-start-auto¨ hinzu, damit das Menü nach rechts kommt. -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#solution" class="nav-link">Solution</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#consulting" class="nav-link">Consulting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#team" class="nav-link">Team</a>
+                    </li>
+                        <li class="nav-item">
+                        <a href="#faq" class="nav-link">FAQ</a>
+                    </li>
+<!--Language choice per link, this is just pro memoria-->
+                    <li class="nav-item">
+                        <a href="#language" class="nav-link">D|E</a>
+                    </li>
+                </ul>
+           </div>
+        </div>
+    </nav>
+
+<!-- ELEMENT 1: RESPONSIVE NAVBAR END-->
+
+
+
+<!-- ELEMENT 2: RESPONSIVE SHOWCASE AREA START-->
+
+<!--For this section: dark background, light text, padding of five on all sides, centered text-->
+<!--I want the text centered on small screen (text-center, by default) but I want to have it aligned on the left on anything bigger than a mobile screen (text-sm-start)-->
+<section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+    <!-- For content not to go to the edge at the left we put it into a container. However, the section itself we don't want in a container because that's the dark background.-->
+    <!-- "align-items-center justify-content-between": I want to align the button the the center of the para and I want some space between image and para. -->
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div> 
+                    <h1>Quiz <span class="text-warning">Kong</span></h1>
+    <!--Make the text a little big bigger. Use the class lead to do that.-->
+    <!-- Get some space above and below the paragraph: ad a margin class "my" (m stands for margin and y stands for y-axis: -->
+    
+                    <p class="lead my-4">Lorem ipsum dolor sit amet  <br>consectetur adipisicing elit. Atque necessitatibus vitae repellendus.</p>
+    <!--BUTTON that will open up the module (?). Button is blue (btn-primary) and bigger than the default (btn-lg)-->
+<!--
+                    <button 
+                        class="btn btn-primary btn-lg mb-3"
+                        data-bs-toggle="modal" 
+                        data-bs-target="#enroll">Join!</button>
+-->
+                </div>
+    <!--To avoid that image breaks out of the container we add class image-fluid, so the image is bound to the container. To make the image half the size, we add w-50-->
+    <!--On very small screens I don't want to show the image. So I add "d-none" ("d" stands for display) and "d-sm-block" (to show the image on anything bigger than the small breakpoint, "d-sm-block" is display block on small and up)  -->
+                    <img class="img-fluid w-50 d-none d-lg-block "src="assets/Movie 2. From Dusk till Dawn.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!--Inside the flex box, we're going to have two flex items: the content stuff to the left and the image to the right. To align these side by side, we are going to put them in a flex row. So we add to the line 70 div class= d-flex which is flexbox. However, flexbox should not apply to very small screens, i.e. mobile screens, so we add a breakpoint class "d-sm-flex". This will not display it as flex, until it hits the sm breakpoint. So on mobile screens, it will be a flex row, the h1 will be above the image. In larger screens, it will become a row, the h1 will be left to the image.-->
+    
+    <!-- ELEMENT 2: RESPONSIVE SHOWCASE AREA END-->
+    
+
+
+
+<!-- ELEMENT 8: TEAM SECTION START -->
+
+<section id="team" class="p-5 bg-primary">
+    <div class="container">
+        <h2 class="text-center text-white">Some Of The Quiz Sections</h2>
+        <p class="lead text-center text-white mb-5">
+            Our team all are experts with 10+ years working as entrepreneurs and researchers in the industry. 
+        </p>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/24.jpg" class="rounded-circle mb-3" alt="" />
+                        <h3 class="card-title mb-3">Hammond Organs</h3>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque necessitatibus vitae repellendus similique accusantium possimus?
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/women/6.jpg" class="rounded-circle mb-3" alt="" />
+                        <h3 class="card-title mb-3">Technology</h3>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque necessitatibus vitae repellendus similique accusantium possimus?
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle mb-3" alt="" />
+                        <h3 class="card-title mb-3">Animals</h3>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque necessitatibus vitae repellendus similique accusantium possimus?
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle mb-3" alt="" />
+                        <h3 class="card-title mb-3">Movies</h3>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque necessitatibus vitae repellendus similique accusantium possimus?
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ELEMENT 8: TEAM SECTION END -->
+
+
+
+
+
+
+
+
+
+
+<!-- ELEMENT 7: FREQUENTLY ASKED QUESTIONS SECTION START -->
+<!-- For the FAQs we use the accordion-->
+<section id="FAQ" class="p-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Choose Your Game</h2>
+<!--All copy from getbootstrap.com-->
+
+
+        <div class="accordion accordion-flush" id="faq">
+
+        <!--Item 1-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button 
+                        class="accordion-button collapsed" 
+                        type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#question-one" >
+                    
+                        Select Topic
+                    </button>
+                </h2>
+            <div id="question-one" class="accordion-collapse collapse"  data-bs-parent="#questions">
+
+                <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus aut saepe. Dicta corrupti iste assumenda voluptate eaque laboriosam! Neque error architecto, eaque expedita officia sit totam assumenda aut officiis soluta. Consectetur iusto dolor et eos quasi minus obcaecati eligendi, ipsum tempora animi necessitatibus architecto laborum tempore! Delectus, odio blanditiis.
+                </div>
+            </div>
+            </div>
+            <!--Item 2-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button 
+                        class="accordion-button collapsed" 
+                        type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#question-two" >
+                        Select number of questions
+                    </button>
+                </h2>
+            <div id="question-two" class="accordion-collapse collapse"  data-bs-parent="#questions">
+
+                <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus aut saepe. Dicta corrupti iste assumenda voluptate eaque laboriosam! Neque error architecto, eaque expedita officia sit totam assumenda aut officiis soluta. Consectetur iusto dolor et eos quasi minus obcaecati eligendi, ipsum tempora animi necessitatibus architecto laborum tempore! Delectus, odio blanditiis.
+                </div>
+            </div>
+            </div>
+            <!--Item 3
+
+            <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button 
+                        class="accordion-button collapsed" 
+                        type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#question-three" >
+                    
+                        What's my benefit / Why do I need to have it?
+                        </button>
+                    </h2>
+                <div id="question-three" class="accordion-collapse collapse"  data-bs-parent="#questions">
+
+                <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus aut saepe. Dicta corrupti iste assumenda voluptate eaque laboriosam! Neque error architecto, eaque expedita officia sit totam assumenda aut officiis soluta. Consectetur iusto dolor et eos quasi minus obcaecati eligendi, ipsum tempora animi necessitatibus architecto laborum tempore! Delectus, odio blanditiis.
+                </div>
+            </div>
+            -->
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ELEMENT 7: FREQUENTLY ASKED QUESTIONS SECTION END -->
+
+
+
+
+<!-- ELEMENT 10: FOOTER START -->
+
+<footer class="p-5 bg-dark text-white text-center position-relative">
+<div class="container">
+<p class="lead">Copyright &copy; 2023 Cyr Quiz</p>
+<a href="#" class="position-absolute bottom-0 end-0 p-5">
+    <i class="bi bi-arrow-up-circle h1"></i>
+</a>
+
+</div>
+</footer>
+
+
+
+
+<!-- ELEMENT 10: FOOTER END -->
+
+<!--MODAL-->
+<div 
+    class="modal fade" 
+    id="enroll" 
+    tabindex="-1" 
+    aria-labelledby="enrollLabel" 
+    aria-hidden="true">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="enrollLabel">Modal title</h5>
+          <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+
+                <div class="mb-3">
+                    <label for="first-name" class="col-form-label">
+                        First Name:
+                    </label>
+                    <input type="text" class="form-control" id="first-name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="last-name" class="col-form-label">
+                        Last Name:
+                    </label>
+                    <input type="text" class="form-control" id="last-name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="col-form-label">
+                        Email:
+                    </label>
+                    <input type="text" class="form-control" id="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="col-form-label">
+                        Phone:
+                    </label>
+                    <input type="text" class="form-control" id="phone">
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button 
+            type="button" 
+            class="btn btn-secondary" 
+            data-bs-dismiss="modal"
+            >Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- SCRIPT ELEMENTS FOR BOOTSTRAP AND MAPBOX START -->
+
+<!--BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
+    ></script>
+
+
+
+<!--MAPBOX-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+
+    <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoiY3lyc2VuIiwiYSI6ImNsYnN4dmUxaDFmdmczdm1yc3lyMHlyMHEifQ.0DDtMuv3mw4jiYnQYmoPOw';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [8.52016, 47.38757],
+    zoom: 16,
+  });
+    </script>
+
+
+<!-- SCRIPT ELEMENTS FOR BOOTSTRAP AND MAPBOX END -->
+
+
+
+</body>
+</html>
