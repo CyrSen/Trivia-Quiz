@@ -37,7 +37,7 @@
         <div class="container">
 
 <!-- a tag class of navbar-BRAND -->
-            <a href="#" class="navbar-brand">Danger Quiz</a>
+            <a href="#" class="navbar-brand text-dark">Danger Quiz</a>
 
 <!--BUTTON einfügen für Hamburger-Menü: We give it a class of "navbar dash toggler". We give it a type of "button". We need to add a couple of extra attributes: 1) we want the toggle to collapse. 2) we need to target a specific item to toggle, this is navbar. And then we put this ID navmenu to the navbar-collapse. We then need to put something in the button. This we do by adding a hamburger-icon with a span tag and add to that navbar-toggler-icon--->
 
@@ -57,13 +57,13 @@
 <!--In der ul fügen wir die Klasse margin-start-auto¨ hinzu, damit das Menü nach rechts kommt. -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#solution" class="nav-link">Start</a>
+                        <a href="1-index.html" class="nav-link">Start</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#consulting" class="nav-link">Questions</a>
+                        <a href="2-questions.html" class="nav-link">Questions</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#team" class="nav-link">Result</a>
+                        <a href="3-result.html" class="nav-link">Result</a>
                     </li>
 
                 </ul>
@@ -85,13 +85,13 @@
         <div class="container">
             <div class="d-sm-flex align-items-center justify-content-between">
                 <div> 
-                    <h1><span class="text-warning">Danger </span>Quiz 
+                    <h1><span class="text-warning">Danger Quiz </span> 
                     
                     </h1>
     <!--Make the text a little big bigger. Use the class lead to do that.-->
     <!-- Get some space above and below the paragraph: ad a margin class "my" (m stands for margin and y stands for y-axis: -->
     
-                    <p class="lead my-4">This quiz is not for the faint hearted. <br>Are you man enough?</p>
+                    <p class="lead my-4">This quiz is not for the faint hearted. </p><h3> Are you man enough? </h3>
     <!--BUTTON that will open up the module (?). Button is blue (btn-primary) and bigger than the default (btn-lg)-->
 <!--
                     <button 
@@ -102,7 +102,7 @@
                 </div>
     <!--To avoid that image breaks out of the container we add class image-fluid, so the image is bound to the container. To make the image half the size, we add w-50-->
     <!--On very small screens I don't want to show the image. So I add "d-none" ("d" stands for display) and "d-sm-block" (to show the image on anything bigger than the small breakpoint, "d-sm-block" is display block on small and up)  -->
-                    <img class="img-fluid w-50 d-none d-lg-block "src="assets/Hero image .jpg" alt="">
+                    <img class="img-fluid w-25 d-none d-lg-block "src="assets/Vampire 2.jpeg" alt="">
             </div>
         </div>
     </section>
@@ -113,7 +113,9 @@
 
 
 
-<!-- ELEMENT 8: TEAM SECTION START -->
+<!-- ELEMENT 8: TEAM SECTION START
+
+
 
 <section id="team" class="p-5 bg-warning">
     <div class="container">
@@ -180,7 +182,7 @@
         </div>
     </div>
 </section>
-<!-- ELEMENT 8: TEAM SECTION END -->
+ELEMENT 8: TEAM SECTION END -->
 
 
 
@@ -193,28 +195,28 @@
 
 <!-- ELEMENT 7: FREQUENTLY ASKED QUESTIONS SECTION START -->
 <!-- For the FAQs we use the accordion-->
-<section id="FAQ" class="p-5">
+
+<section id="FAQ" class="p-5 bg-black text-light">
     <div class="container">
-        <h2 class="text-center mb-4">Choose Your Game</h2>
+        <h2 class="text-center mb-4 text-white-50">Choose Your Game</h2>
 <!--All copy from getbootstrap.com-->
 
 
         <div class="accordion accordion-flush" id="faq">
 
         <!--Item 1-->
-            <div class="accordion-item">
+            <div class="accordion-item ">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button 
-                        class="accordion-button collapsed" 
+                        class="accordion-button collapsed bg-dark text-light" 
                         type="button" 
                         data-bs-toggle="collapse" data-bs-target="#question-one" >
-                    
-                        Select Topic
+                        Select topic
                     </button>
                 </h2>
             <div id="question-one" class="accordion-collapse collapse"  data-bs-parent="#questions">
 
-                <div class="accordion-body">
+                <div class="accordion-body bg-dark text-warning">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus aut saepe. Dicta corrupti iste assumenda voluptate eaque laboriosam! Neque error architecto, eaque expedita officia sit totam assumenda aut officiis soluta. Consectetur iusto dolor et eos quasi minus obcaecati eligendi, ipsum tempora animi necessitatibus architecto laborum tempore! Delectus, odio blanditiis.
                 </div>
             </div>
@@ -223,7 +225,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button 
-                        class="accordion-button collapsed" 
+                        class="accordion-button collapsed bg-dark text-light" 
                         type="button" 
                         data-bs-toggle="collapse" data-bs-target="#question-two" >
                         Select number of questions
@@ -231,7 +233,7 @@
                 </h2>
             <div id="question-two" class="accordion-collapse collapse"  data-bs-parent="#questions">
 
-                <div class="accordion-body">
+                <div class="accordion-body bg-dark text-warning">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minus aut saepe. Dicta corrupti iste assumenda voluptate eaque laboriosam! Neque error architecto, eaque expedita officia sit totam assumenda aut officiis soluta. Consectetur iusto dolor et eos quasi minus obcaecati eligendi, ipsum tempora animi necessitatibus architecto laborum tempore! Delectus, odio blanditiis.
                 </div>
             </div>
@@ -267,12 +269,14 @@
 
 <!-- ELEMENT 10: FOOTER START -->
 
-<footer class="p-5 bg-dark text-white text-center position-relative">
+<footer class="p-5 bg-black text-warning text-center position-relative">
 <div class="container">
-<p class="lead">Copyright &copy; 2023 Cyr Quiz</p>
+<p class="lead">Copyright &copy; 2023 Danger Quiz</p>
 <a href="#" class="position-absolute bottom-0 end-0 p-5">
-    <i class="bi bi-arrow-up-circle h1"></i>
+    <button type="button" class="btn btn-outline-warning">Start Quiz</button>
+
 </a>
+
 
 </div>
 </footer>
