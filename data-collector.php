@@ -6,7 +6,7 @@
 */
 session_start();
 
-/Hilfswerkzeuge laden 
+//Hilfswerkzeuge laden 
 include 'tools.php';
 
 // Falls verfügbar, hole die Quiz-Daten aus der Session.
@@ -30,3 +30,9 @@ else {
 }
 
 prettyPrint($lastQuestionIndex, '$lastQuestionIndex =');
+
+// Abhängig von der aktuellen Hauptseite: Bereite die benötigten Seitendaten vor.
+$scriptName = $_Server['SCRIPT_NAME']; // https://www.php,net/manual/en/reserved.variables.server.php 
+prettyPrint($scriptName, '$scriptName =');
+
+// index.php (Startseite) ---------------------------------------------------
