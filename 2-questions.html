@@ -31,47 +31,48 @@
 
 <!-- HTML5 nav tag with the class navbar, breakpoint at large (below breakpoint of 992px, hamburger-menu disappears) dark with light text -->
 <!-- Add a little bit of padding to the navbar: "py-3", whereas "padding on the y-Axis"; "fixed-top" keeps the navbar at the top. This brings the issue that it covers part of the content. To fix that, I'm going into styles.css. There I'm writing body and I'm using the pseudo-selector before. Basically we add a ghost element of 60px. -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+<nav class="navbar navbar-expand-lg bg-black navbar-dark py-3 fixed-top">
 
-    <!-- Container, der Logo in einem bestimmten Bereich hält, und beim wide screen nicht zu nah am Rand hält: Klasse Container-->
-            <div class="container">
-    
-    <!-- a tag class of navbar-BRAND -->
-    <a href="#" class="navbar-brand text-dark">Danger Quiz</a>
-    
-    <!--BUTTON einfügen für Hamburger-Menü: We give it a class of "navbar dash toggler". We give it a type of "button". We need to add a couple of extra attributes: 1) we want the toggle to collapse. 2) we need to target a specific item to toggle, this is navbar. And then we put this ID navmenu to the navbar-collapse. We then need to put something in the button. This we do by adding a hamburger-icon with a span tag and add to that navbar-toggler-icon--->
-    
-    <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navmenu"
-        >
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <!--MENU START-->
-    <!--Div mit der Klasse Collapse-->
-                <div class="collapse navbar-collapse" id="navmenu">
-    
-    <!--In der ul fügen wir die Klasse margin-start-auto¨ hinzu, damit das Menü nach rechts kommt. -->
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-          <a href="1-index.html" class="nav-link">Start</a>
-      </li>
-      <li class="nav-item">
-          <a href="2-questions.html" class="nav-link">Questions</a>
-      </li>
-      <li class="nav-item">
-          <a href="3-result.html" class="nav-link">Result</a>
-      </li>
-
-  </ul>
-               </div>
-            </div>
-        </nav>
-    
-    <!-- ELEMENT 1: RESPONSIVE NAVBAR END-->
+  <!-- Container, der Logo in einem bestimmten Bereich hält, und beim wide screen nicht zu nah am Rand hält: Klasse Container-->
+          <div class="container">
+  
+  <!-- a tag class of navbar-BRAND -->
+              <a href="1-index.html" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
+  
+  <!--BUTTON einfügen für Hamburger-Menü: We give it a class of "navbar dash toggler". We give it a type of "button". We need to add a couple of extra attributes: 1) we want the toggle to collapse. 2) we need to target a specific item to toggle, this is navbar. And then we put this ID navmenu to the navbar-collapse. We then need to put something in the button. This we do by adding a hamburger-icon with a span tag and add to that navbar-toggler-icon--->
+  
+  <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navmenu"
+      >
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <!--MENU START-->
+  <!--Div mit der Klasse Collapse-->
+              <div class="collapse navbar-collapse" id="navmenu">
+  
+  <!--In der ul fügen wir die Klasse margin-start-auto¨ hinzu, damit das Menü nach rechts kommt. -->
+                  <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                          <a href="1-index.html" class="nav-link">Start</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="2-questions.html" class="nav-link">Questions</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="3-result.html" class="nav-link">Result</a>
+                      </li>
+  
+                  </ul>
+             </div>
+          </div>
+      </nav>
+  
+  <!-- ELEMENT 1: RESPONSIVE NAVBAR END-->
+  
 
 
 <!-- ELEMENT 6: SERVICES SECTION START-->
@@ -82,34 +83,53 @@
         <div class="row align-items-center justify-content-between">
             
             <div class="col-md p-5">
+
                 <h2><span class="text-warning">Question: </span> </h2>
             
                 <p class="lead">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus, ex impedit tempora ullam neque!
                 </p>
+
                 <p>
                     1. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 </p>
+
                 <p>
                   2. Laudantium odio facilis asperiores necessitatibus.
-              </p>
-              <p>
-                3. Quam, illo. Numquam amet provident autem.
-            </p>
-            <p>
-              4. Laudantium odio facilis asperiores necessitatibus labutem. 
-          </p>
-          <p>
-            5. Laudantium aspernatur tempora autem.
-        </p>
+                </p>
+
+                <p>
+                  3. Quam, illo. Numquam amet provident autem.
+                </p>
+                
+                <p>
+                  4. Laudantium odio facilis asperiores necessitatibus labutem. 
+                </p>
+                
+                <p>
+                  5. Laudantium aspernatur tempora autem.
+                </p>
                
-            </div>
+              </div>
 
             <div class="col-md">
                 <img src="assets/Hero image .jpg" class="img-fluid" alt="">
             </div>
 
         </div>
+
+
+      </div>
+    </section>
+    <!-- ELEMENT 6: SERVICES SECTION END-->
+
+
+<!-- RADIO SECTION START-->
+
+        <section id="consulting" class="p-5 bg-black text-light">
+          <div class="container">
+              <div class="row align-items-center justify-content-between">
+
 
 
         <div class="form-check">
@@ -151,128 +171,35 @@
 
         
 
-
+        </div>
     </div>
 </section>
-<!-- ELEMENT 6: SERVICES SECTION END-->
+<!-- RADIO SECTION END-->
 
 
+<!-- SHADOW CONTAINER SECTION START-->
+<section id="shadow-section" class="p-5 bg-black text-light">
+  <div class="container">
+  </div>
+</section>
+<!-- SHADOW CONTAINER SECTION END-->
 
 
-<!-- ELEMENT 10: FOOTER START -->
-
-<footer class="p-5 bg-black text-warning text-center position-relative">
-    <div class="container">
-    <p class="lead">Copyright &copy; 2023 Danger Quiz</p>
-    <a href="#" class="position-absolute bottom-0 end-0 p-5">
-        <button type="button" class="btn btn-outline-warning">Next Question</button>
-    
-    </a>
-    
-    
-    </div>
-    </footer>
-    
-    
-    
-    
-    <!-- ELEMENT 10: FOOTER END -->
-    
-    <!--MODAL-->
-    <div 
-        class="modal fade" 
-        id="enroll" 
-        tabindex="-1" 
-        aria-labelledby="enrollLabel" 
-        aria-hidden="true">
-    
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="enrollLabel">Modal title</h5>
-              <button 
-              type="button" 
-              class="btn-close" 
-              data-bs-dismiss="modal" 
-              aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-                <p class="lead">Fill out this form and we will get back to you</p>
-                <form>
-    
-                    <div class="mb-3">
-                        <label for="first-name" class="col-form-label">
-                            First Name:
-                        </label>
-                        <input type="text" class="form-control" id="first-name">
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="last-name" class="col-form-label">
-                            Last Name:
-                        </label>
-                        <input type="text" class="form-control" id="last-name">
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="email" class="col-form-label">
-                            Email:
-                        </label>
-                        <input type="text" class="form-control" id="email">
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="phone" class="col-form-label">
-                            Phone:
-                        </label>
-                        <input type="text" class="form-control" id="phone">
-                    </div>
-    
-                </form>
-            </div>
-            <div class="modal-footer">
-              <button 
-                type="button" 
-                class="btn btn-secondary" 
-                data-bs-dismiss="modal"
-                >Close</button>
-              <button type="button" class="btn btn-primary">Submit</button>
-            </div>
+<!-- FOOTER START -->
+      <nav class="navbar navbar-expand-lg bg-black py-3 fixed-bottom">
+          <div class="container">
+              <a href="#" class="navbar-brand text-white-50 fs-6">&copy; 2023 Danger Quiz & Co.</a>
+              <button type="button" class="btn btn-outline-warning">Next Question</button>
           </div>
-        </div>
-      </div>
-    
-    
-    
-    
-    
-    
-    <!-- SCRIPT ELEMENTS FOR BOOTSTRAP AND MAPBOX START -->
-    
-    <!--BOOTSTRAP-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
-        ></script>
-    
-    
-    
-    <!--MAPBOX-->
-        <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
-    
-        <script>
-              mapboxgl.accessToken = 'pk.eyJ1IjoiY3lyc2VuIiwiYSI6ImNsYnN4dmUxaDFmdmczdm1yc3lyMHlyMHEifQ.0DDtMuv3mw4jiYnQYmoPOw';
-      var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [8.52016, 47.38757],
-        zoom: 16,
-      });
-        </script>
-    
-    
-    <!-- SCRIPT ELEMENTS FOR BOOTSTRAP AND MAPBOX END -->
-    
-    
+      </nav>
+<!-- FOOTER END -->
 
-    </body>
-    </html>
+
+<!-- SCRIPT ELEMENT FOR BOOTSTRAP START -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
+  ></script>
+<!-- SCRIPT ELEMENT FOR BOOTSTRAP END -->
+
+
+</body>
+</html>

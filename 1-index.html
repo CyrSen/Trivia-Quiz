@@ -30,13 +30,13 @@
 
 <!-- HTML5 nav tag with the class navbar, breakpoint at large (below breakpoint of 992px, hamburger-menu disappears) dark with light text -->
 <!-- Add a little bit of padding to the navbar: "py-3", whereas "padding on the y-Axis"; "fixed-top" keeps the navbar at the top. This brings the issue that it covers part of the content. To fix that, I'm going into styles.css. There I'm writing body and I'm using the pseudo-selector before. Basically we add a ghost element of 60px. -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+    <nav class="navbar navbar-expand-lg bg-black navbar-dark py-3 fixed-top">
 
 <!-- Container, der Logo in einem bestimmten Bereich hält, und beim wide screen nicht zu nah am Rand hält: Klasse Container-->
         <div class="container">
 
 <!-- a tag class of navbar-BRAND -->
-            <a href="#" class="navbar-brand text-dark">Danger Quiz</a>
+            <a href="1-index.html" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
 
 <!--BUTTON einfügen für Hamburger-Menü: We give it a class of "navbar dash toggler". We give it a type of "button". We need to add a couple of extra attributes: 1) we want the toggle to collapse. 2) we need to target a specific item to toggle, this is navbar. And then we put this ID navmenu to the navbar-collapse. We then need to put something in the button. This we do by adding a hamburger-icon with a span tag and add to that navbar-toggler-icon--->
 
@@ -84,7 +84,7 @@
         <div class="container">
             <div class="d-sm-flex align-items-center justify-content-between">
                 <div> 
-                    <h1><span class="text-warning">Danger Quiz </span> 
+                    <h1><span class="text-warning">Danger Zone </span> 
                     
                     </h1>
     <!--Make the text a little big bigger. Use the class lead to do that.-->
@@ -164,9 +164,9 @@
 
 
 <!-- FOOTER START -->
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-bottom">
+        <nav class="navbar navbar-expand-lg bg-black py-3 fixed-bottom">
             <div class="container">
-                <a href="#" class="navbar-brand text-warning">&copy; 2023 Danger Quiz & Co.</a>
+                <a href="#" class="navbar-brand text-white-50 fs-6">&copy; 2023 Danger Quiz & Co.</a>
                 <button type="button" class="btn btn-outline-warning">Start Quiz</button>
             </div>
         </nav>
