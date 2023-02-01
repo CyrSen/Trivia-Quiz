@@ -15,7 +15,6 @@
     </head>
     <body>
         <?php 
-            require "./includes/db.php"; 
 
             // SQL-Statement formulieren: Alle Daten (ganze Tabellenzeile)
             // zur Frage mit der angegebenen $id auslesen

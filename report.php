@@ -21,10 +21,7 @@
         <script src="js/main.js"></script>
     </head>
     <body>
-        <?php
-            require "./includes/db.php"; 
-
-        ?>      
+             
         
         <!-- FORMULAR "Fragestellung" -->
         <div class="row">

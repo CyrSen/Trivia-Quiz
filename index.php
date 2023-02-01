@@ -14,9 +14,7 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-    <?php
-        require "./includes/db.php";
-    ?>
+   
 
     <!-- FORMULAR "Themenwahl" -->
     <div style="padding: 20px;">
