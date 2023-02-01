@@ -1,6 +1,6 @@
 <?php
 /*
-    session_start() Muss vor dem Gebrauch von $_SEESION ausgeführt werden.
+    ss Muss vor dem Gebrauch von $_SEESION ausgeführt werden.
     Dazu muss das data-collector.php ganz am Anfang einer Hauptseite per 
     'include' oder 'require' referenziert werden.
 */
@@ -51,7 +51,7 @@ else if (str_contains($scriptName, 'question')) {
         // Starte ein neues Quiz ...
         $questionNum = intval($_POST["questionNum"]);
 
-        $questionIdSequence = fetchQuestionByIdSequence(
+        $questionIdSequence = fetchQuestionIdSequence(
             $_POST["topic"],
             $questionNum,
             $dbConnection
@@ -100,52 +100,8 @@ prettyPrint($currentQuestionIndex, '$currentQuestionIndex = ');
     /*...
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -158,8 +114,14 @@ else {
     // Unbekannte URL
 }
 
+
+
+
+
+
+
 // Speichere Quizparameter und Post-Daten der letzten Frage in der Session.
-if (isset($quiz)) { // Achtung: $quiz ist nicht immer verfügbar.
+if (isset($quiz) && $currentQuestionIndex >=0) { 
     $_SESSION["quiz"] = $quiz;
     $_SESSION["quiz"]["lastQuestionIndex"] = $lastQuestionIndex;
     $_SESSION["quiz"]["currentQuestionIndex"] = $currentQuestionIndex;
@@ -171,6 +133,7 @@ if ($lastQuestionIndex >= 0) { // Achtung: Nur für gültige Frageindexe speiche
 }
 
 // DEVONLY: Gib die aktuelle $_SESSION in die Seite aus.
-// prettyPrint($_SESSION, '$_SESSION = ');
+
+prettyPrint($_SESSION, '$_SESSION = ');
 
 ?>

@@ -15,14 +15,16 @@
     </head>
     <body>
         <?php 
+            // Bestimme die Anzahl der verfügbaren Fragen
+            if (isset($quiz["questionIdSequence"])) {
+                $id = $quiz["questionIdSequence"][$currentQuestionIndex];
+        }
 
-            // SQL-Statement formulieren: Alle Daten (ganze Tabellenzeile)
-            // zur Frage mit der angegebenen $id auslesen
-            $id = '301';
+            // Hole alle Datenfelder zur Frage mit $id von der Datenbank
             $question = fetchQuestionById($id, $dbConnection);
         ?>
 
-        <!-- FORMULAR "Fragestellung" -->
+        <!-- FORMULAR "Fragestellung" --> 
         <div class="row">
             <div class="col-sm-8">
                 <!-- Fragestellung -->
