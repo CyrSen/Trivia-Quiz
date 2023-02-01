@@ -51,7 +51,7 @@ else if (str_contains($scriptName, 'question')) {
         // Starte ein neues Quiz ...
         $questionNum = intval($_POST["questionNum"]);
 
-        $questionIdSequence = fetchQuestionIdSequence(
+        $questionIdSequence = fetchQuestionByIdSequence(
             $_POST["topic"],
             $questionNum,
             $dbConnection

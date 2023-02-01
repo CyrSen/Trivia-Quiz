@@ -15,7 +15,7 @@ $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 function fetchQuestionById($id, $dbConnection) {
     $sqlStatement = $dbConnection->query("SELECT * FROM `questions` WHERE `id` = $id");
     $row = $sqlStatement->fetch(PDO::FETCH_ASSOC);
-echo "test";
+
     print_r($row);
 
     /*
@@ -25,7 +25,7 @@ echo "test";
     return $row;
 }
 
-function fetchQuestionIdSequence($topic, $questionNum, $dbConnection) {
+function fetchQuestionByIdSequence($topic, $questionNum, $dbConnection) {
     // SELECT `id` FROM `questions` WHERE `topic` = 'movies' ORDER BY RAND() LIMIT 5;
     $query = "SELECT `id` FROM `questions` WHERE `topic` = '$topic' ORDER BY RAND() LIMIT $questionNum";
     $sqlStatement = $dbConnection->query($query);
