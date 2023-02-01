@@ -36,3 +36,127 @@ $scriptName = $_Server['SCRIPT_NAME']; // https://www.php,net/manual/en/reserved
 prettyPrint($scriptName, '$scriptName =');
 
 // index.php (Startseite) ---------------------------------------------------
+if (str_contains($scriptName, 'index')) { // https://www.php.net/manual/en/function.str-contains.php
+    // Lösche die Daten, inklusive bestehende Quiz-Daten in der $_SESSION.
+    session_unset();
+
+    // Setze explizit auch $quiz zurück (Konsistenz gegenüber Session).
+    $quiz = null;
+}
+//. question.php (Frageseite) --------------------------------------------------
+else if (str_contains($scriptName, 'question')) {
+    if ($lastQuestionIndex === -1) { // -1 bedeutet, dass das Quiz noch nicht gestartet wurde.}
+        // Starte ein neues Quiz ...
+        $quiz = array(
+            "topic" => $_POST["topic"],
+            "questionNum" => $_POST["questionNum"],
+            "lastQuestionIndex" => $lastQuestionIndex,
+            "currentQuestionIndex" => -1,
+            "questionIdSequence" => array()
+        );
+}  
+prettyPrint($quiz, '$quiz = ');
+    /*...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    */
+    $indexStep = 1;
+prettyPrint($indexStep, '$indexStep = ');
+    if (isset($POST["indexStep"])) {
+        // https://www.php.net/manual/en/function.intval.php
+        $indexStep = intval($_POST["indexStep"]);
+    }
+
+    // Index der aktuellen Frage, sowie für das Quiz setzen.
+    $currentQuestionIndex = $lastQuestionIndex + $indexStep;
+prettyPrint($currentQuestionIndex, '$currentQuestionIndex = ');
+    /*...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// report.php (Auswertungsseite) ----------------------------------------------------------------
+else if (str_contains($scriptName, 'report')) {
+    // Keine weitere Aufbereitung der Daten
+}
+else {
+    // Unbekannte URL
+}
+
+// Speichere Quizparameter und Post-Daten der letzten Frage in der Session.
+if (isset($quiz)) { // Achtung: $quiz ist nicht immer verfügbar.
+    $_SESSION["quiz"] = $quiz;
+    $_SESSION["quiz"]["lastQuestionIndex"] = $lastQuestionIndex;
+    $_SESSION["quiz"]["currentQuestionIndex"] = $currentQuestionIndex;
+}
+
+if ($lastQuestionIndex >= 0) { // Achtung: Nur für gültige Frageindexe speichern.
+    $questionName = "question-" . $lastQuestionIndex;
+    $_SESSION[$questionName] = $_POST;
+}
+
+// DEVONLY: Gib die aktuelle $_SESSION in die Seite aus.
+// prettyPrint($_SESSION, '$_SESSION = ');
+
+?>
