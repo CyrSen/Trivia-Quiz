@@ -34,6 +34,7 @@ prettyPrint($lastQuestionIndex, '$lastQuestionIndex =');
 // Abhängig von der aktuellen Hauptseite: Bereite die benötigten Seitendaten vor.
 $scriptName = $_SERVER['SCRIPT_NAME']; // https://www.php,net/manual/en/reserved.variables.server.php 
 prettyPrint($scriptName, '$scriptName =');
+prettyPrint($_POST, '$_POST =');
 
 // index.php (Startseite) ---------------------------------------------------
 if (str_contains($scriptName, 'index')) { // https://www.php.net/manual/en/function.str-contains.php
