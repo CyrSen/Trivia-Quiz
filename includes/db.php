@@ -19,10 +19,21 @@ echo "test";
     print_r($row);
 
     /*
-        Gibt Zeilendaten als assoziativer Array zu genau einer Frge zurück.
+        Gibt Zeilendaten als assoziativer Array zu genau einer Frage zurück.
         Beispiel: $row = array('id' => 301, 'topic' => movies, ...)
     */
     return $row;
+}
+
+function fetchQuestionIdSequence($topic, $questionNum, $dbConnection) {
+    // SELECT `id` FROM `questions` WHERE `topic` = 'movies' ORDER BY RAND() LIMIT 5;
+    $query = "SELECT `id` FROM `questions` WHERE `topic` = '$topic' ORDER BY RAND() LIMIT $questionNum";
+    $sqlStatement = $dbConnection->query($query);
+    $rows = $sqlStatement->fetchAll(PDO::FETCH_COLUMN, 0); // `id` ist Spalte (column) 0.
+
+    // print_r($rows);
+
+    return $rows;
 }
 
 ?>
