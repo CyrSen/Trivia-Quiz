@@ -4,56 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<!-- LINKS BOOTSTRAP & STYLESHEET START-->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-        crossorigin="anonymous"/>
-    <link 
-        rel="stylesheet" 
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"  rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css"/>
-<!-- LINKS BOOTSTRAP & STYLESHEET START-->
-
-
-
     <title>Danger Quiz Start</title>
-
 </head>
 
 <body>
 
-<!-- ELEMENT 1: RESPONSIVE NAVBAR START-->
+<!-- NAVBAR START-->
 
-<!-- HTML5 nav tag with the class navbar, breakpoint at large (below breakpoint of 992px, hamburger-menu disappears) dark with light text -->
-<!-- Add a little bit of padding to the navbar: "py-3", whereas "padding on the y-Axis"; "fixed-top" keeps the navbar at the top. This brings the issue that it covers part of the content. To fix that, I'm going into styles.css. There I'm writing body and I'm using the pseudo-selector before. Basically we add a ghost element of 60px. -->
     <nav class="navbar navbar-expand-lg bg-black navbar-dark py-3 fixed-top">
-
-<!-- Container, der Logo in einem bestimmten Bereich hält, und beim wide screen nicht zu nah am Rand hält: Klasse Container-->
         <div class="container">
-
-<!-- a tag class of navbar-BRAND -->
             <a href="1-index.html" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
 
-<!--BUTTON einfügen für Hamburger-Menü: We give it a class of "navbar dash toggler". We give it a type of "button". We need to add a couple of extra attributes: 1) we want the toggle to collapse. 2) we need to target a specific item to toggle, this is navbar. And then we put this ID navmenu to the navbar-collapse. We then need to put something in the button. This we do by adding a hamburger-icon with a span tag and add to that navbar-toggler-icon--->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<button 
-    class="navbar-toggler" 
-    type="button" 
-    data-bs-toggle="collapse" 
-    data-bs-target="#navmenu"
-    >
-    <span class="navbar-toggler-icon"></span>
-</button>
-
-<!--MENU START-->
-<!--Div mit der Klasse Collapse-->
+        <!--MENU-->
             <div class="collapse navbar-collapse" id="navmenu">
-
-<!--In der ul fügen wir die Klasse margin-start-auto¨ hinzu, damit das Menü nach rechts kommt. -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a href="1-index.html" class="nav-link">Start</a>
@@ -64,59 +34,33 @@
                     <li class="nav-item">
                         <a href="3-result.html" class="nav-link">Result</a>
                     </li>
-
                 </ul>
            </div>
         </div>
     </nav>
 
-<!-- ELEMENT 1: RESPONSIVE NAVBAR END-->
+<!-- NAVBAR END-->
 
 
+<!-- SHOWCASE START-->
 
-<!-- ELEMENT 2: RESPONSIVE SHOWCASE AREA START-->
-
-<!--For this section: dark background, light text, padding of five on all sides, centered text-->
-<!--I want the text centered on small screen (text-center, by default) but I want to have it aligned on the left on anything bigger than a mobile screen (text-sm-start)-->
-<section class="bg-black text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-    <!-- For content not to go to the edge at the left we put it into a container. However, the section itself we don't want in a container because that's the dark background.-->
-    <!-- "align-items-center justify-content-between": I want to align the button the the center of the para and I want some space between image and para. -->
+    <section class="bg-black text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
         <div class="container">
             <div class="d-sm-flex align-items-center justify-content-between">
                 <div> 
-                    <h1><span class="text-warning">Danger Zone </span> 
-                    
-                    </h1>
-    <!--Make the text a little big bigger. Use the class lead to do that.-->
-    <!-- Get some space above and below the paragraph: ad a margin class "my" (m stands for margin and y stands for y-axis: -->
-    
+                    <h1><span class="text-warning">Danger Zone </span></h1>
                     <p class="lead my-4">This quiz is not for the faint hearted. </p><h3> Are you man enough? <br><br><br><br></h3>
-    <!-- TODO: <br> tags ersetzen durch Abstand zwischen Bild und "Chose Your Game" bei kleinem Screen-->
-    <!--BUTTON that will open up the module (?). Button is blue (btn-primary) and bigger than the default (btn-lg)-->
-<!--
-                    <button 
-                        class="btn btn-primary btn-lg mb-3"
-                        data-bs-toggle="modal" 
-                        data-bs-target="#enroll">Join!</button>
--->
                 </div>
-    <!--To avoid that image breaks out of the container we add class image-fluid, so the image is bound to the container. To make the image half the size, we add w-50-->
-    <!--On very small screens I don't want to show the image. So I add "d-none" ("d" stands for display) and "d-sm-block" (to show the image on anything bigger than the small breakpoint, "d-sm-block" is display block on small and up)  -->
-
-
-
-
                     <img class="img-fluid w-25  d-lg-block "src="assets/Vampire 2.jpeg" alt="">
             </div>
         </div>
     </section>
-    <!--Inside the flex box, we're going to have two flex items: the content stuff to the left and the image to the right. To align these side by side, we are going to put them in a flex row. So we add to the line 70 div class= d-flex which is flexbox. However, flexbox should not apply to very small screens, i.e. mobile screens, so we add a breakpoint class "d-sm-flex". This will not display it as flex, until it hits the sm breakpoint. So on mobile screens, it will be a flex row, the h1 will be above the image. In larger screens, it will become a row, the h1 will be left to the image.-->
     
-    <!-- ELEMENT 2: RESPONSIVE SHOWCASE AREA END-->
+    <!-- SHOWCASE AREA END-->
     
 
 
-<!-- CHOOSE YOUR GAME SECTION START -->
+<!-- CHOOSE YOUR GAME START -->
 <section id="FAQ" class="p-5 bg-black text-light">
     <div class="container">
         <h2 class="text-center mb-4 text-white-50">Choose Your Game</h2>
@@ -138,6 +82,7 @@
                 </div>
                 </div>
             </div>
+
             <!--Item 2-->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -157,15 +102,15 @@
         </div>
     </div>
 </section>
-<!-- CHOOSE YOUR GAME SECTION END -->
+<!-- CHOOSE YOUR GAME END -->
 
 
-<!-- SHADOW CONTAINER SECTION START-->
+<!-- SHADOW CONTAINER START-->
 <section id="shadow-section" class="p-5 bg-black text-light">
     <div class="container">
     </div>
 </section>
-<!-- SHADOW CONTAINER SECTION END-->
+<!-- SHADOW CONTAINER END-->
 
 
 <!-- FOOTER START -->
@@ -176,13 +121,6 @@
             </div>
         </nav>
 <!-- FOOTER END -->
-
-
-<!-- SCRIPT ELEMENT FOR BOOTSTRAP START -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
-    ></script>
-<!-- SCRIPT ELEMENT FOR BOOTSTRAP END -->
-
 
 </body>
 </html>
