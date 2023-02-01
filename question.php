@@ -14,7 +14,9 @@
         <script src="js/main.js"></script>
     </head>
     <body>
-
+<?php 
+include "./includes/header.php"
+?>
     
         <?php 
             // Bestimme die Anzahl der verfügbaren Fragen
@@ -87,7 +89,9 @@
 
 
 
-
+<?php 
+include "./includes/footer.php"
+?>
 
 
 </body>

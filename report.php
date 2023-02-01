@@ -21,7 +21,9 @@
         <script src="js/main.js"></script>
     </head>
     <body>
-             
+<?php 
+include "./includes/header.php"
+?>     
         
         <!-- FORMULAR "Fragestellung" -->
         <div class="row">
@@ -34,6 +36,11 @@
             
             <button class="btn btn-primary" onclick="document.location='/index.php';">Neues Quiz</button>
         </div>
+
+
+<?php 
+include "./includes/footer.php"
+?>
 
 </body>
 </html>

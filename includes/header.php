@@ -1,4 +1,4 @@
-<?php
+
 <!-- NAVBAR START-->
 
 <nav class="navbar navbar-expand-lg bg-black navbar-dark py-3 fixed-top">
@@ -27,4 +27,3 @@
     </nav>
 
 <!-- NAVBAR END-->
-?>
