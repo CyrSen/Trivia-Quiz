@@ -65,19 +65,18 @@
                     input type="hidden"
                         questionNum, lastQuestionIndex: mit PHP gesetzt
                         indexStep: mit JavaScript setIntValue(fieldId, value) verändert
-
-                        <?php // echo $quiz["questionNum"]; ?>
-                        <?php // echo $currentQuestionIndex; ?> -->
-
-                <input type="hidden" id="questionNum" value="15">
-                <input type="hidden" id="lastQuestionIndex" name="lastQuestionIndex" value="1">
+                 -->
+                <input type="hidden" id="questionNum" value="<?php echo $quiz["questionNum"]; ?>">
+                <input type="hidden" id="lastQuestionIndex" name="lastQuestionIndex" value="<?php echo $currentQuestionIndex; ?> ">
                 <input type="hidden" id="indexStep" name="indexStep" value="1">
+
+
 
                 <!-- Validuerungswarnung -->
                 <p id="validation-warning" class="warning"></p>
 
                 <!-- submit -->
-                <button type="submit" class="btn btn-primary" onclick="navigatePrevious();">Previous</button>
+                <!-- <button type="submit" class="btn btn-primary" onclick="navigatePrevious();">Previous</button> -->
                 <button type="submit" class="btn btn-primary">Next</button>
                 <p class="spacer"></p>
             </form>
