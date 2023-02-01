@@ -4,75 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-        crossorigin="anonymous"/>
-
-    <link 
-        rel="stylesheet" 
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"  rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css"/>
-
-    <title>Danger Quiz Questions</title>
-
+    <title>Danger Quiz Start</title>
 </head>
 
 <body>
 
-<!-- ELEMENT 1: RESPONSIVE NAVBAR START-->
+<!-- NAVBAR START-->
 
-<!-- HTML5 nav tag with the class navbar, breakpoint at large (below breakpoint of 992px, hamburger-menu disappears) dark with light text -->
-<!-- Add a little bit of padding to the navbar: "py-3", whereas "padding on the y-Axis"; "fixed-top" keeps the navbar at the top. This brings the issue that it covers part of the content. To fix that, I'm going into styles.css. There I'm writing body and I'm using the pseudo-selector before. Basically we add a ghost element of 60px. -->
-<nav class="navbar navbar-expand-lg bg-black navbar-dark py-3 fixed-top">
+    <nav class="navbar navbar-expand-lg bg-black navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a href="1-index.html" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
 
-  <!-- Container, der Logo in einem bestimmten Bereich hält, und beim wide screen nicht zu nah am Rand hält: Klasse Container-->
-          <div class="container">
-  
-  <!-- a tag class of navbar-BRAND -->
-              <a href="1-index.html" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
-  
-  <!--BUTTON einfügen für Hamburger-Menü: We give it a class of "navbar dash toggler". We give it a type of "button". We need to add a couple of extra attributes: 1) we want the toggle to collapse. 2) we need to target a specific item to toggle, this is navbar. And then we put this ID navmenu to the navbar-collapse. We then need to put something in the button. This we do by adding a hamburger-icon with a span tag and add to that navbar-toggler-icon--->
-  
-  <button 
-      class="navbar-toggler" 
-      type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#navmenu"
-      >
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  <!--MENU START-->
-  <!--Div mit der Klasse Collapse-->
-              <div class="collapse navbar-collapse" id="navmenu">
-  
-  <!--In der ul fügen wir die Klasse margin-start-auto¨ hinzu, damit das Menü nach rechts kommt. -->
-                  <ul class="navbar-nav ms-auto">
-                      <li class="nav-item">
-                          <a href="1-index.html" class="nav-link">Start</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="2-questions.html" class="nav-link">Questions</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="3-result.html" class="nav-link">Result</a>
-                      </li>
-  
-                  </ul>
-             </div>
-          </div>
-      </nav>
-  
-  <!-- ELEMENT 1: RESPONSIVE NAVBAR END-->
-  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--MENU-->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="1-index.html" class="nav-link">Start</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="2-questions.html" class="nav-link">Questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="3-result.html" class="nav-link">Result</a>
+                    </li>
+                </ul>
+           </div>
+        </div>
+    </nav>
+
+<!-- NAVBAR END-->
 
 
 
@@ -184,29 +151,22 @@
 <!-- RADIO SECTION END-->
 
 
-<!-- SHADOW CONTAINER SECTION START-->
+<!-- SHADOW CONTAINER START-->
 <section id="shadow-section" class="p-5 bg-black text-light">
   <div class="container">
   </div>
 </section>
-<!-- SHADOW CONTAINER SECTION END-->
+<!-- SHADOW CONTAINER END-->
 
 
 <!-- FOOTER START -->
       <nav class="navbar navbar-expand-lg bg-black py-3 fixed-bottom">
           <div class="container">
               <a href="#" class="navbar-brand text-white-50 fs-6">&copy; 2023 Danger Quiz & Co.</a>
-              <button type="button" class="btn btn-outline-warning">Next Question</button>
+              <button type="button" class="btn btn-outline-warning">Start Quiz</button>
           </div>
       </nav>
 <!-- FOOTER END -->
-
-
-<!-- SCRIPT ELEMENT FOR BOOTSTRAP START -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
-  ></script>
-<!-- SCRIPT ELEMENT FOR BOOTSTRAP END -->
-
 
 </body>
 </html>
