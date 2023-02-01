@@ -108,12 +108,12 @@ prettyPrint($currentQuestionIndex, '$currentQuestionIndex = ');
 
 // report.php (Auswertungsseite) ----------------------------------------------------------------
 else if (str_contains($scriptName, 'report')) {
-    // Keine weitere Aufbereitung der Daten
+    // Die Reportseite ist ausserhalb der Fragesequenz
+    $currentQuestionIndex = -1;
 }
 else {
     // Unbekannte URL
 }
-
 
 
 
@@ -133,7 +133,5 @@ if ($lastQuestionIndex >= 0) { // Achtung: Nur für gültige Frageindexe speiche
 }
 
 // DEVONLY: Gib die aktuelle $_SESSION in die Seite aus.
-
 prettyPrint($_SESSION, '$_SESSION = ');
-
 ?>
