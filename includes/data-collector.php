@@ -6,8 +6,9 @@
 */
 session_start();
 
-//Hilfswerkzeuge laden 
+// Hilfswerkzeuge laden 
 include 'tools.php';
+include 'db.php'; 
 
 // Falls verfügbar, hole die Quiz-Daten aus der Session.
 if (isset($_SESSION["quiz"])) $quiz = $_SESSION["quiz"];
@@ -48,12 +49,24 @@ if (str_contains($scriptName, 'index')) { // https://www.php.net/manual/en/funct
 else if (str_contains($scriptName, 'question')) {
     if ($lastQuestionIndex === -1) { // -1 bedeutet, dass das Quiz noch nicht gestartet wurde.}
         // Starte ein neues Quiz ...
+        $questionNum = intval($_POST["questionNum"]);
+
+        $questionIdSequence = fetchQuestionIdSequence(
+            $_POST["topic"],
+            $questionNum,
+            $dbConnection
+        );
+
+
+        // Berechne die wirklich mögliche Anzahl von Fragen
+        $questionNum = min(count($questionIdSequence), $questionNum);
+
         $quiz = array(
             "topic" => $_POST["topic"],
-            "questionNum" => $_POST["questionNum"],
+            "questionNum" => $questionNum,
             "lastQuestionIndex" => $lastQuestionIndex,
             "currentQuestionIndex" => -1,
-            "questionIdSequence" => array()
+            "questionIdSequence" => $questionIdSequence
         );
 }  
 prettyPrint($quiz, '$quiz = ');
