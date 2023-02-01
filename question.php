@@ -14,6 +14,8 @@
         <script src="js/main.js"></script>
     </head>
     <body>
+
+    
         <?php 
             // Bestimme die Anzahl der verfügbaren Fragen
             if (isset($quiz["questionIdSequence"])) {
@@ -82,6 +84,11 @@
             </form>
         </div>
     </div>
+
+
+
+
+
 
 </body>
 </html>
