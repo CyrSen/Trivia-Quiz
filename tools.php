@@ -6,7 +6,6 @@ function prettyPrint($value, $label) {
 
     print_r($value);
     print "</pre>";
-
 }
 
 ?>
