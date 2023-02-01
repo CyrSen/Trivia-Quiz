@@ -20,9 +20,9 @@ echo "test";
 
     /*
         Gibt Zeilendaten als assoziativer Array zu genau einer Frge zurück.
-        Beispiel: $row = array('id' => 9999, 'topic' => geopgraphy, ...)
+        Beispiel: $row = array('id' => 301, 'topic' => movies, ...)
     */
     return $row;
 }
 
-?
+?>
