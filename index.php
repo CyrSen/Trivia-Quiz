@@ -43,11 +43,11 @@ include "./includes/header.php"
 
 
    <!-- FORMULAR "Themenwahl" -->
-   <div style="padding: 20px;">
+   <div style="color: grey; background-color: black; padding: 20px;">
         <form id="quiz-form" action="question.php" method="post" onsubmit="return navigate('next');">
             <!-- Themenwahl -->
-            <label for="quiz-topic" class="form-label">Quiz Thema - bitte auswählen!</label> 
-            <select style="width:400px" class="form-select" aria-label="Default select example" id="topic" name="topic">
+            <label for="quiz-topic" class="form-label">Quiz Topic - Please Choose!</label> 
+            <select style="width:400px; background-color: #ffc107" class="form-select" aria-label="Default select example" id="topic" name="topic">
                 <option value="music">Music</option>
                 <option value="ch-norris">Chuck Norris</option>
                 <option value="animals">Animals</option>
@@ -65,7 +65,7 @@ include "./includes/header.php"
 
             <!-- Anzahl Fragen -->
             <label style="margin-top:20px;" for="questionNum" class="form-label">Number of Questions</label>
-            <input style="width:100px" type="number" class="form-control"
+            <input style="width:100px; background-color: #ffc107" type="number" class="form-control"
                 id="questionNum" name="questionNum"
                 min="5" max="40" value="10">
                 
@@ -81,7 +81,7 @@ include "./includes/header.php"
             <p id="validation-warning" class="warning"></p>
 
             <!-- submit -->
-            <input style="margin-top:20px;" type="submit" value="Start">
+            <input style="margin-top:20px; background-color: #ffc107;" type="submit" value="Start">
         </form>
     </div>
 
