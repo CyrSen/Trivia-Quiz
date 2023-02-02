@@ -10,11 +10,14 @@ session_start();
 include 'tools.php';
 include 'db.php'; 
 
+//prettyPrint($_SESSION, '$_SESSION ='); 
+//exit(); 
+
 // Falls verfügbar, hole die Quiz-Daten aus der Session.
 if (isset($_SESSION["quiz"])) $quiz = $_SESSION["quiz"];
 else $quiz = null;
 
-prettyPrint($quiz, '$quiz =');
+//prettyPrint($quiz, '$quiz =');
 
 /*
     Hole die Indexnummer der letzen Frage aus $_POST "lastQuestionIndex". 
@@ -30,12 +33,12 @@ else {
     $lastQuestionIndex = -1;
 }
 
-prettyPrint($lastQuestionIndex, '$lastQuestionIndex =');
+//prettyPrint($lastQuestionIndex, '$lastQuestionIndex =');
 
 // Abhängig von der aktuellen Hauptseite: Bereite die benötigten Seitendaten vor.
 $scriptName = $_SERVER['SCRIPT_NAME']; // https://www.php,net/manual/en/reserved.variables.server.php 
-prettyPrint($scriptName, '$scriptName =');
-prettyPrint($_POST, '$_POST =');
+//prettyPrint($scriptName, '$scriptName =');
+//prettyPrint($_POST, '$_POST =');
 
 // index.php (Startseite) ---------------------------------------------------
 if (str_contains($scriptName, 'index')) { // https://www.php.net/manual/en/function.str-contains.php
@@ -60,7 +63,9 @@ else if (str_contains($scriptName, 'question')) {
 
         // Berechne die wirklich mögliche Anzahl von Fragen
         $questionNum = min(count($questionIdSequence), $questionNum);
-
+       
+        //quiz definition?
+       
         $quiz = array(
             "topic" => $_POST["topic"],
             "questionNum" => $questionNum,
@@ -69,17 +74,8 @@ else if (str_contains($scriptName, 'question')) {
             "questionIdSequence" => $questionIdSequence
         );
 }  
-prettyPrint($quiz, '$quiz = ');
+//prettyPrint($quiz, '$quiz = ');
     /*...
-
-
-
-
-
-
-
-
-
 
 
 
@@ -88,7 +84,7 @@ prettyPrint($quiz, '$quiz = ');
 
     */
     $indexStep = 1;
-prettyPrint($indexStep, '$indexStep = ');
+//prettyPrint($indexStep, '$indexStep = ');
     if (isset($POST["indexStep"])) {
         // https://www.php.net/manual/en/function.intval.php
         $indexStep = intval($_POST["indexStep"]);
@@ -96,26 +92,52 @@ prettyPrint($indexStep, '$indexStep = ');
 
     // Index der aktuellen Frage, sowie für das Quiz setzen.
     $currentQuestionIndex = $lastQuestionIndex + $indexStep;
-prettyPrint($currentQuestionIndex, '$currentQuestionIndex = ');
+
+// //prettyPrint($currentQuestionIndex, '$currentQuestionIndex = ');
     /*...
 
 
     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    if ($currentQuestionIndex +1 < $quiz["questionNum"]) {
+        // Fragestellung anzeigen
+        $actionUrl = "question.php";
+    }
+    
+    else { // $currentQuestionIndex >= $quiz["questionNum"]}
+        // Redirect zur Auswertungsseite
+        $actionUrl = "report.php";
+    }
 }
 
 
 
 
-// report.php (Auswertungsseite) ----------------------------------------------------------------
+
+// report.php (Auswertungsseite)
 else if (str_contains($scriptName, 'report')) {
     // Die Reportseite ist ausserhalb der Fragesequenz
     $currentQuestionIndex = -1;
 }
+
 else {
     // Unbekannte URL
 }
-
-
 
 
 
@@ -133,5 +155,7 @@ if ($lastQuestionIndex >= 0) { // Achtung: Nur für gültige Frageindexe speiche
 }
 
 // DEVONLY: Gib die aktuelle $_SESSION in die Seite aus.
-prettyPrint($_SESSION, '$_SESSION = ');
+//prettyPrint($_SESSION, '$_SESSION = ');
+
+
 ?>

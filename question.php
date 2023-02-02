@@ -1,5 +1,7 @@
-    <?php
+<?php
         require "./includes/data-collector.php"; // Muss ganz am Anfang der Hauptseite sein, enthält start_session()
+        echo "top of question page";
+        print_r($quiz);
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -17,17 +19,16 @@
 <?php 
 include "./includes/header.php"
 ?>
-    
         <?php 
             // Bestimme die Anzahl der verfügbaren Fragen
             if (isset($quiz["questionIdSequence"])) {
-                $id = $quiz["questionIdSequence"][$currentQuestionIndex];
-        }
+                echo "do we get here";
 
-            // Hole alle Datenfelder zur Frage mit $id von der Datenbank
+                $id = $quiz["questionIdSequence"][$currentQuestionIndex];
+                echo "$id";
+        } // Hole alle Datenfelder zur Frage mit $id von der Datenbank
             $question = fetchQuestionById($id, $dbConnection);
         ?>
-
         <!-- FORMULAR "Fragestellung" --> 
         <div class="row">
             <div class="col-sm-8">
@@ -35,7 +36,7 @@ include "./includes/header.php"
             <h7>Frage<?php echo ($currentQuestionIndex + 1); ?> von <?php echo $quiz["questionNum"]; ?></h7>
             <h3><?php echo $question["question_text"]; ?></h3>
 
-            <form id="quiz-form" action="question.php" method="post"> onsubmit="return navigate('next');
+            <form id="quiz-form" action="<?php echo $actionUrl;?>" method="post" onsubmit="return navigate('next')";>
                 <?php
                     // Generiere Antwort-Radio-Buttons mit Beschriftung
 
@@ -43,7 +44,7 @@ include "./includes/header.php"
                     $correct = $question["correct"];
 
                     for ($a= 1; $a <= 5; $a++) {
-                        // Setze für $answerColumnName den Namen der Tabellenspalte "answer-N" zusammen
+                        // 307Setze für $answerColumnName den Namen der Tabellenspalte "answer-N" zusammen
                         $answerColumnName = "answer-" . $a;
 
                         // Falls überhaupt Antworttext in $question[$answerColumnName] gibt

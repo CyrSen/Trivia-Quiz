@@ -7,6 +7,9 @@
 
     // Variablen für die hidden-Felder vorbereiten (lastPageID, quiz-last-question-index)
     $currentPageID = "question-" . $currentQuestionIndex;
+    
+    prettyPrint($_SESSION, '$_SESSION = ');
+
     ?>
     <!DOCTYPE html>
     <html lang="en">
