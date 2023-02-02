@@ -78,6 +78,26 @@ include "./includes/header.php"
 
 
 
+
+
+
+
+
+
+
+
+
+
+            
+        </div>
+    </section>
+    
+    <!-- SHOWCASE AREA END-->
+    
+
+
+
+
    <!-- FORMULAR "Themenwahl" -->
    <div style="color: grey; background-color: black; padding: 20px;">
         <form id="quiz-form" action="question.php" method="post" onsubmit="return navigate('next');">
@@ -120,26 +140,6 @@ include "./includes/header.php"
             <input style="margin-top:20px; background-color: #F0A22A;" type="submit" value="Start">
         </form>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-    </section>
-    
-    <!-- SHOWCASE AREA END-->
-    
-
-
 
 
 <?php 
