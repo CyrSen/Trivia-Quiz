@@ -1,10 +1,19 @@
 
 <!-- NAVBAR START-->
 
+
+
+
+
+
+
+
+
 <nav class="navbar navbar-expand-lg bg-black navbar-dark py-3 fixed-top">
         <div class="container">
             <a href="1-index.html" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
 
+            
  <!--
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
