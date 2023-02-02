@@ -87,7 +87,7 @@ include "./includes/header.php"
                 <option value="astronautics">Astronautics</option>
                 <!-- <option value="technology">Technology</option> -->
                 <!-- <option value="ai">Artificial Intelligence</option> -->
-                <option value="geopgraphy">Geography</option>
+                <option value="geography">Geography</option>
                 <!-- <option value="sports">Sports</option> -->
                 <option value="science">Science</option>
                 <option value="informatics">Informatics</option>
