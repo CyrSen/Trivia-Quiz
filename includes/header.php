@@ -11,7 +11,7 @@
 
 <nav class="navbar navbar-expand-lg bg-black navbar-dark py-3 fixed-top">
         <div class="container">
-            <a href="1-index.html" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
+            <a href="" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
 
             
  <!--
