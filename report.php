@@ -72,11 +72,16 @@ include "./includes/header.php"
             </div> 
           
             <button class="btn btn-danger" onclick="document.location='/index.php';">Let's try again!</button>
+      
+
         </div>
                 </div>
             </div>
         </div>
-   </section>
+      <br>
+            <br>
+            <br>
+            <br>   </section>
 <!-- ELEMENT 5: SOLUTION SECTION END-->
 
 

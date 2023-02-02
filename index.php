@@ -68,31 +68,6 @@ include "./includes/header.php"
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-        </div>
-    </section>
-    
-    <!-- SHOWCASE AREA END-->
     
 
 
@@ -140,6 +115,34 @@ include "./includes/header.php"
             <input style="margin-top:20px; background-color: #F0A22A;" type="submit" value="Start">
         </form>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </div>
+    </section>
+    
+    <!-- SHOWCASE AREA END-->
+    
+
+
+
 
 
 <?php 
