@@ -19,13 +19,35 @@
 <?php 
 include "./includes/header.php"
 ?>
-        <?php 
+
+
+
+
+
+
+<!-- ELEMENT 6: SERVICES SECTION START-->
+<!-- All same as Element 5, except: bg-dark; text-light, image right and content left-->
+
+
+
+<section id="consulting" class="p-5 bg-black text-light">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            
+            <div class="col-md p-5">
+
+             <!--    <h2><span class="text-warning">Question: </span> </h2>  -->
+            
+
+
+
+                <?php 
             // Bestimme die Anzahl der verfügbaren Fragen
             if (isset($quiz["questionIdSequence"])) {
-                echo "do we get here";
+              //  echo "do we get here";
 
                 $id = $quiz["questionIdSequence"][$currentQuestionIndex];
-                echo "$id";
+              //  echo "$id";
         } // Hole alle Datenfelder zur Frage mit $id von der Datenbank
             $question = fetchQuestionById($id, $dbConnection);
         ?>
@@ -33,7 +55,7 @@ include "./includes/header.php"
         <div class="row">
             <div class="col-sm-8">
                 <!-- Fragestellung -->
-            <h7>Frage<?php echo ($currentQuestionIndex + 1); ?> von <?php echo $quiz["questionNum"]; ?></h7>
+                <h2><span class="text-warning">Question <?php echo ($currentQuestionIndex + 1); ?> of <?php echo $quiz["questionNum"]; ?>:</h2><br><br>
             <h3><?php echo $question["question_text"]; ?></h3>
 
             <form id="quiz-form" action="<?php echo $actionUrl;?>" method="post" onsubmit="return navigate('next')";>
@@ -82,11 +104,66 @@ include "./includes/header.php"
 
                 <!-- submit -->
                 <!-- <button type="submit" class="btn btn-primary" onclick="navigatePrevious();">Previous</button> -->
-                <button type="submit" class="btn btn-primary">Next</button>
+                <button type="submit" class="btn btn-warning">Next</button>
                 <p class="spacer"></p>
             </form>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p class="lead">
+                Are you sure?
+
+                </p>
+
+                
+               
+              </div>
+
+            <div class="col-md ">
+                <img src="assets/scary-tree.jpg" class="img-fluid d-none d-md-block float-end" alt="scary pear tree">
+            </div>
+
+        </div>
+
+
+      </div>
+    </section>
+    <!-- ELEMENT 6: SERVICES SECTION END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

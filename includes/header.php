@@ -5,25 +5,29 @@
         <div class="container">
             <a href="1-index.html" class="navbar-brand text-light fs-6 text-white-50">Danger Quiz</a>
 
+ <!--
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!--MENU-->
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="1-index.html" class="nav-link">Start</a>
+                        <a href="index.php" class="nav-link">Start</a>
                     </li>
                     <li class="nav-item">
-                        <a href="2-questions.html" class="nav-link">Questions</a>
+                        <a href="question.php" class="nav-link">Question</a>
                     </li>
                     <li class="nav-item">
-                        <a href="3-result.html" class="nav-link">Result</a>
+                        <a href="report.php" class="nav-link">Result</a>
                     </li>
                 </ul>
            </div>
         </div>
+
+        -->
+
     </nav>
 
 <!-- NAVBAR END-->

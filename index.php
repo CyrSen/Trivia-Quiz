@@ -33,11 +33,47 @@ include "./includes/header.php"
                 </div>
                     <img class="img-fluid w-25  d-lg-block "src="assets/Vampire 2.jpeg" alt="">
             </div>
-        </div>
-    </section>
-    
-    <!-- SHOWCASE AREA END-->
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,9 +117,29 @@ include "./includes/header.php"
             <p id="validation-warning" class="warning"></p>
 
             <!-- submit -->
-            <input style="margin-top:20px; background-color: #ffc107;" type="submit" value="Start">
+            <input style="margin-top:20px; background-color: #F0A22A;" type="submit" value="Start">
         </form>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </section>
+    
+    <!-- SHOWCASE AREA END-->
+    
+
+
 
 
 <?php 
